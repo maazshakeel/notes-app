@@ -2,15 +2,15 @@ import * as React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/core' 
 
-const HomeScreen: React.FC = () => {
+const LoginScreen: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text>HomeScreen</Text> 
+      <Text>LoginScreen</Text> 
     </View>
   )
 } 
 
-export default HomeScreen
+export default LoginScreen
 
 const styles = StyleSheet.create({
   container: {
