@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 const HomeScreen: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ const HomeScreen: React.FC = () => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>You do not have any notes.</Text> 
       </View>
+      <Icon name="plus" size={30} color="springgreen" />
     </View>
   )
 } 
