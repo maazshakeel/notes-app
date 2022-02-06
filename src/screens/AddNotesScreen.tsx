@@ -1,11 +1,25 @@
 import * as React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/Entypo'
+
+interface Message {
+  created: boolean,
+}
 
 const AddNotesScreen: React.FC = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.plusIcon}>
+        <Icon 
+          name="circle-with-cross" 
+          size={50} 
+          color="#569a37" 
+          onPress={() => navigation.push('Home', {
+            created: false,
+          })}
+        />
+      </View>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Add</Text> 
       </View>
@@ -13,8 +27,10 @@ const AddNotesScreen: React.FC = ({ navigation }) => {
         <Icon 
           name="check" 
           size={50} 
-          color="springgreen" 
-          onPress={() => navigation.goBack()}
+          color="#569a37" 
+          onPress={() => navigation.navigate('Home', {
+            created: true,
+          })}
         />
       </View>
     </View>
